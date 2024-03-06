@@ -35,9 +35,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install Node dependencies
-      run: |
-        npm install
+ 
 
     # Add any steps for building your project here
     # - name: Build project
