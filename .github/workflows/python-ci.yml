@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-test:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,19 +25,15 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run tests
+    - name: Run pytest
       run: |
-        pytest
+        pytest ./tests  # Direct pytest to the directory containing your tests, if not in the root directory
 
-  # Conceptual deployment job; customize as needed
-  deploy:
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    steps:
-    - uses: actions/checkout@v3
-
-    # Add your deployment steps here
-    # - name: Deploy to production
-    #   run: |
-    #     echo "Replace this with your deployment commands."
+    # Optional: Upload coverage report as an artifact (if using pytest-cov)
+    - name: Generate coverage report
+      run: |
+        pytest --cov=./my_package --cov-report=xml  # Replace './my_package' with your package's directory
+    - uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage.xml
