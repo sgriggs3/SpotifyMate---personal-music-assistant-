@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.8, 3.9, 3.10, 3.11]
-        node-version: ['16.8'] # Specify the Node.js version you need, avoiding deprecated ones
+        node-version: ['20'] # Specify the Node.js version you need, avoiding deprecated ones
         include:
           - python-version: 3.11
             experimental: true
