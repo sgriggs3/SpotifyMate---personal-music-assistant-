@@ -46,7 +46,8 @@ class FeedbackProcessor:
         try:
             # Implementation for adding a 'like' to the user's preferences
             logging.info(f"User {user_id} liked track {track_id}")
-            # Example: self.user_preferences_db.add_user_like(user_id, track_id)
+            # Actual database interaction code to add a 'like'
+            self.user_preferences_db.add_user_like(user_id, track_id)
         except Exception as e:
             logging.error(f"Error adding like for user {user_id} on track {track_id}: {e}")
 
@@ -61,6 +62,7 @@ class FeedbackProcessor:
         try:
             # Implementation for adding a 'dislike' to the user's preferences
             logging.info(f"User {user_id} disliked track {track_id}")
-            # Example: self.user_preferences_db.add_user_dislike(user_id, track_id)
+            # Actual database interaction code to add a 'dislike'
+            self.user_preferences_db.add_user_dislike(user_id, track_id)
         except Exception as e:
             logging.error(f"Error adding dislike for user {user_id} on track {track_id}: {e}")
