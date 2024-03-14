@@ -12,15 +12,20 @@ def collect_user_data(sp, user_id):
     Returns:
     - A DataFrame containing the collected user data
     """
-    # Placeholder for Spotify API call to fetch user listening history
-    # This is an example and needs to be replaced with actual Spotify API calls
-    user_data = sp.current_user_recently_played()
+    try:
+        user_data = sp.current_user_recently_played()
+    except Exception as e:
+        print(f"Error fetching user data: {e}")
+        return pd.DataFrame()  # Return an empty DataFrame in case of error
     
-    # Convert the data to a pandas DataFrame for easier processing
     tracks = []
     for item in user_data['items']:
         track_id = item['track']['id']
-        track_details = fetch_track_details(sp, track_id)  # Utility function to fetch track details
+        try:
+            track_details = fetch_track_details(sp, track_id)  # Utility function to fetch track details
+        except Exception as e:
+            print(f"Error fetching track details for {track_id}: {e}")
+            continue
         tracks.append(track_details)
     
     df = pd.DataFrame(tracks)
@@ -36,11 +41,10 @@ def preprocess_data(df):
     Returns:
     - A DataFrame with the preprocessed data
     """
-    # Example preprocessing steps:
-    # - Handle missing values
+    # Handle missing values
     df.dropna(inplace=True)
     
-    # - Convert categorical data to numerical (if necessary)
+    # Convert categorical data to numerical (if necessary)
     # This is a placeholder; actual implementation depends on the data and model requirements
     
     return df
