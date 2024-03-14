@@ -12,26 +12,46 @@ load_dotenv()
 
 def initialize_spotify_client():
     # Use environment variables for Spotify credentials
-    client_credentials_manager = SpotifyClientCredentials(client_id=os.getenv('SPOTIFY_CLIENT_ID'), 
-                                                          client_secret=os.getenv('SPOTIFY_CLIENT_SECRET'))
-    sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-    return sp
+    try:
+        client_credentials_manager = SpotifyClientCredentials(client_id=os.getenv('SPOTIFY_CLIENT_ID'), 
+                                                              client_secret=os.getenv('SPOTIFY_CLIENT_SECRET'))
+        sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
+        return sp
+    except Exception as e:
+        print(f"Error initializing Spotify client: {e}")
+        return None
 
 def load_user_preference_model(model_path):
     # Load a pre-trained user preference model from disk.
-    return joblib.load(model_path)
+    try:
+        return joblib.load(model_path)
+    except Exception as e:
+        print(f"Error loading user preference model: {e}
+        return None
 
 def get_user_features():
     # Fetch user features for recommendation. Adjust based on actual implementation.
+    # Note: This is a placeholder function. In a real-world application, user features should be dynamically retrieved.
     user_features = {"feature1": 0.5, "feature2": 0.3}
     return user_features
 
 def main():
+    # Check for required environment variables
+    required_env_vars = ['SPOTIFY_CLIENT_ID', 'SPOTIFY_CLIENT_SECRET', 'USER_PREFERENCE_MODEL_PATH', 'USER_PREFERENCES_DB_PATH']
+    missing_env_vars = [var for var in required_env_vars if not os.getenv(var)]
+    if missing_env_vars:
+        print(f"Missing required environment variables: {', '.join(missing_env_vars)}")
+        return
+
     # Initialize Spotify client
     sp = initialize_spotify_client()
+    if not sp:
+        return
 
     # Load the pre-trained User Preference Model
     user_preference_model = load_user_preference_model(os.getenv('USER_PREFERENCE_MODEL_PATH'))
+    if not user_preference_model:
+        return
 
     # Instantiate the RecommendationEngine with the model and Spotify client
     recommendation_engine = RecommendationEngine(user_preference_model, sp)
@@ -54,4 +74,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
