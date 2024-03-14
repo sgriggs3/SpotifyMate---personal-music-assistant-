@@ -43,8 +43,8 @@ class RecommendationEngine:
         Returns:
         A tuple containing a list of seed genres and a dictionary of target attributes.
         """
-        seed_genres = ['rock', 'pop']  # Dynamic conversion based on model output
-        target_attributes = {'energy': 0.7, 'danceability': 0.5}
-        # Implement logic to dynamically adjust genres and attributes based on preferences
+        # TODO: Implement logic to dynamically adjust genres and attributes based on preferences
+        # This should involve analyzing the predicted_preferences to extract meaningful genres and attributes
+        seed_genres = ['rock', 'pop']  # Example static values, to be replaced
+        target_attributes = {'energy': 0.7, 'danceability': 0.5}  # Example static values, to be replaced
         return seed_genres, target_attributes
-
