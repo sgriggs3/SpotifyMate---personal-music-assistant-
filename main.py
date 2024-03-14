@@ -24,7 +24,8 @@ def initialize_spotify_client():
 def load_user_preference_model(model_path):
     # Load a pre-trained user preference model from disk.
     try:
-        return joblib.load(model_path)
+        user_preference_model = joblib.load(model_path)
+        return user_preference_model
     except Exception as e:
         print(f"Error loading user preference model: {e}")
         return None
