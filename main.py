@@ -31,13 +31,13 @@ def main():
     sp = initialize_spotify_client()
 
     # Load the pre-trained User Preference Model
-    user_preference_model = load_user_preference_model("/path/to/your/model.joblib")
+    user_preference_model = load_user_preference_model(os.getenv('USER_PREFERENCE_MODEL_PATH'))
 
     # Instantiate the RecommendationEngine with the model and Spotify client
     recommendation_engine = RecommendationEngine(user_preference_model, sp)
 
     # (Optional) Initialize the FeedbackProcessor if feedback processing is integrated
-    feedback_processor = FeedbackProcessor(user_preferences_db="path/to/your/database")
+    feedback_processor = FeedbackProcessor(user_preferences_db=os.getenv('USER_PREFERENCES_DB_PATH'))
 
     # Fetch user features
     user_features = get_user_features()
