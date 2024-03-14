@@ -47,3 +47,4 @@ class RecommendationEngine:
         target_attributes = {'energy': 0.7, 'danceability': 0.5}
         # Implement logic to dynamically adjust genres and attributes based on preferences
         return seed_genres, target_attributes
+
