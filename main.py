@@ -26,7 +26,7 @@ def load_user_preference_model(model_path):
     try:
         return joblib.load(model_path)
     except Exception as e:
-        print(f"Error loading user preference model: {e}
+        print(f"Error loading user preference model: {e}")
         return None
 
 def get_user_features():
