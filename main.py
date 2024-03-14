@@ -1,9 +1,11 @@
 import os
+import joblib
 from dotenv import load_dotenv
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from utils.recommendation_engine import RecommendationEngine
-from utils.feedback_processor import FeedbackProcessorfrom user_preference_model import UserPreferenceModel
+from utils.feedback_processor import FeedbackProcessor
+from user_preference_model import UserPreferenceModel
 
 # Load environment variables from .env file
 load_dotenv()
