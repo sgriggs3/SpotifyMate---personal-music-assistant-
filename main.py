@@ -36,7 +36,7 @@ def main():
     # Instantiate the RecommendationEngine with the model and Spotify client
     recommendation_engine = RecommendationEngine(user_preference_model, sp)
 
-    # (Optional) Initialize the FeedbackProcessor if feedback processing is integrated
+    # Initialize the FeedbackProcessor with the user preferences database path
     feedback_processor = FeedbackProcessor(user_preferences_db=os.getenv('USER_PREFERENCES_DB_PATH'))
 
     # Fetch user features
@@ -45,8 +45,9 @@ def main():
     # Generate personalized recommendations
     personalized_recommendations = recommendation_engine.generate_personalized_recommendations(user_features)
 
-    # Process user feedback if applicable (demonstration purpose, adjust based on implementation)
-    # feedback_processor.process_feedback(feedback_data)
+    # Example feedback data (for demonstration purposes)
+    feedback_data = {'user_id': '123', 'track_id': 'abc', 'feedback_type': 'like'}
+    feedback_processor.process_feedback(**feedback_data)
 
     # Output recommendations
     print("Recommended Track IDs:", personalized_recommendations)
