@@ -19,7 +19,6 @@ class UserPreferenceModel:
             logger.info(f"Model saved successfully at {file_path}")
         except Exception as e:
             logger.error(f"Saving model failed: {e}")
-            raise
 
     def load_model(self, file_path):
         try:
@@ -27,6 +26,5 @@ class UserPreferenceModel:
             logger.info(f"Model loaded successfully from {file_path}")
         except Exception as e:
             logger.error(f"Loading model failed: {e}")
-            raise
 
 # Additional methods for the UserPreferenceModel class can be added below
