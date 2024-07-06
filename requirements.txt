@@ -9,7 +9,7 @@ spotipy>=2.19.0,<3  # Use a version range to allow updates within the 2.x series
 pandas>=1.3.0,<1.4  # Use a version range to prevent potential compatibility issues with future major releases
 
 # Machine Learning
-scikit-learn>=1.0.1,<1.1  # Use a version range for minor updates that maintain compatibility
+scikit-learn>=1.5.1,<1.6  # Use a version range for minor updates that maintain compatibility
 
 # Environment and serialization
 python-dotenv>=0.19.1,<1  # Allow updates that are likely to maintain backward compatibility
