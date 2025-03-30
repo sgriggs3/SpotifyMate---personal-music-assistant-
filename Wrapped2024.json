@@ -1,0 +1,135 @@
+{
+  "topArtists": {
+    "numUniqueArtists": 3166,
+    "topArtists": [
+      {
+        "artistUri": "spotify:artist:0RESbWvOMyua0yuyVrztJ5"
+      },
+      {
+        "artistUri": "spotify:artist:0sKsReKseslDlhxmbN6wLk"
+      },
+      {
+        "artistUri": "spotify:artist:6kBDZFXuLrZgHnvmPu9NsG"
+      },
+      {
+        "artistUri": "spotify:artist:6fxyWrfmjcbj5d12gXeiNV"
+      },
+      {
+        "artistUri": "spotify:artist:1iwUuIOKYjV7SKIg27v4zi"
+      }
+    ],
+    "topArtistMilliseconds": 24799966,
+    "topArtistFanPercentage": 0.019599337
+  },
+  "topPodcasts": {
+    "topPodcastsUri": [
+      "spotify:show:4XPl3uEEL9hvqMkoZrzbx5"
+    ],
+    "topPodcastMilliseconds": 55218015,
+    "topPodcastPercentage": 0.0,
+    "totalPodcastMilliseconds": 68680313
+  },
+  "topTracks": {
+    "topTracks": [
+      "spotify:track:0dOu1ovssLjGMuXPRtN7Eq",
+      "spotify:track:4PLNfHtJbMg6hEyFlXdrvG",
+      "spotify:track:426IbqxVPEXQPsN7JJTvGL",
+      "spotify:track:1JbkmK481biG7v6cxm1wY4",
+      "spotify:track:0oJwBPxzJWAMYIIKiKZz5n"
+    ],
+    "topTrackPlayCount": 20,
+    "topTrackFirstPlayedDate": "2024-01-10",
+    "distinctTracksPlayed": 5575
+  },
+  "yearlyMetrics": {
+    "totalMsListened": 1975809773,
+    "mostListenedDay": "2024-03-09",
+    "mostListenedDayMinutes": 1138.3251,
+    "percentGreaterThanWorldwideUsers": 90.405045
+  },
+  "musicEvolution": {
+    "eras": [
+      {
+        "key": "0",
+        "peakMonth": 2,
+        "color": "red-green",
+        "genre": "rap",
+        "mood": "boujee",
+        "descriptor": "abstract",
+        "pivotalArtists": [
+          "spotify:artist:1RyvyyTE3xzB2ZywiAwp0i",
+          "spotify:artist:1iwUuIOKYjV7SKIg27v4zi",
+          "spotify:artist:46SHBwWsqBkxI7EeeBEQG7"
+        ],
+        "tracks": [
+          {
+            "trackName": "Catch A Play",
+            "trackUri": "spotify:track:426IbqxVPEXQPsN7JJTvGL"
+          },
+          {
+            "trackName": "We Don't Luv Em - Remix",
+            "trackUri": "spotify:track:1JbkmK481biG7v6cxm1wY4"
+          },
+          {
+            "trackName": "Sundown (feat. JID)",
+            "trackUri": "spotify:track:0peWrHmZmYS4D77vJJDMhJ"
+          }
+        ]
+      },
+      {
+        "key": "1",
+        "peakMonth": 7,
+        "color": "green",
+        "genre": "memphis rap",
+        "mood": "funny",
+        "descriptor": "football",
+        "pivotalArtists": [
+          "spotify:artist:0RESbWvOMyua0yuyVrztJ5",
+          "spotify:artist:4xH1O3WPbNGJZYyfB9pfIm",
+          "spotify:artist:3HiuzBlSW7pGDXlSFMhO2g"
+        ],
+        "tracks": [
+          {
+            "trackName": "Russian Cream",
+            "trackUri": "spotify:track:03ThZweiBWFP8tOGsk6QMO"
+          },
+          {
+            "trackName": "1 Hell of a Life",
+            "trackUri": "spotify:track:3DV3fcJ1Cgc5lVAdvw73Kx"
+          },
+          {
+            "trackName": "No Back Seat Gang",
+            "trackUri": "spotify:track:7Gza6ePY1h3TUJaokOoIiS"
+          }
+        ]
+      },
+      {
+        "key": "2",
+        "peakMonth": 10,
+        "color": "green-blue",
+        "genre": "swedish pop",
+        "mood": "rainy day",
+        "descriptor": "synthesizer",
+        "pivotalArtists": [
+          "spotify:artist:4KXp3xtaz1wWXnu5u34eVX",
+          "spotify:artist:4eLoWgIQ8bNC5mXpFgewSq",
+          "spotify:artist:4wp7fk3zvD1Nr688kd4VSc"
+        ],
+        "tracks": [
+          {
+            "trackName": "Celsius",
+            "trackUri": "spotify:track:5ec7xNVUGnf61B54y6wxck"
+          },
+          {
+            "trackName": "Nästan Ingenting",
+            "trackUri": "spotify:track:1gRlzQFbR6gK0gRlsRoDoc"
+          },
+          {
+            "trackName": "Bianca",
+            "trackUri": "spotify:track:3OcqDVSPoMs6RKujw2jkch"
+          }
+        ]
+      }
+    ]
+  }
+}
